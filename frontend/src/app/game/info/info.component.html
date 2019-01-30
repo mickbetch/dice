@@ -1,0 +1,39 @@
+<div class="info">
+  <ul class="info__list">
+    <li class="info__item">
+      <h4 class="info__item-title">Шанс выиграть</h4>
+      <h3 class="info__big-text">
+        {{ winChance | number:'1.2-2' }}<small>%</small>
+      </h3>
+    </li>
+    <li class="info__item">
+      <h4 class="info__item-title">Выигрыш</h4>
+      <h3 class="info__big-text">
+        {{ coefficient | number:'1.2-2' }}<small>x</small>
+      </h3>
+      <p class="info__small-text color1">
+        <span>Выигрыш</span>
+        {{ (winAmount / toDecimal) | number:'1.3-3' }} ETH
+      </p>
+      <p class="info__small-text">
+        {{ commissionPercent }}
+        % комиссия.
+        <span *ngIf="bet >= jackpotMinBet">{{(jackpotCommission / toDecimal) | number:'1.3-3' }} ETH в джекпот</span>
+      </p>
+    </li>
+    <li class="info__item">
+      <h4 class="info__item-title">Джекпот</h4>
+      <h3 class="info__big-text">
+        {{ jackpot }} ETH
+      </h3>
+      <p class="info__small-text color2" *ngIf="bet < jackpotMinBet; else elseJackpotBlock">
+        Участвуют ставки от {{ (jackpotMinBet / toDecimal) | number:'1.2-2' }} ETH
+      </p>
+      <ng-template #elseJackpotBlock>
+        <p class="info__small-text color1">
+          Счастливое число - 888
+        </p>
+      </ng-template>
+    </li>
+  </ul>
+</div>

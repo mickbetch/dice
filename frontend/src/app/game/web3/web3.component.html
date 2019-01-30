@@ -1,0 +1,24 @@
+<section class="web3">
+  <div *ngIf="!web3" class="web3__group">
+    <div class="web3__desktop">
+      <h3 class="web3__title">Установите MetaMask</h3>
+      <p class="web3__text">
+        Вам нужен Web3-совместимый кошелек, чтобы играть в наши игры
+      </p>
+      <a class="web3__link" href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">
+        Скачать MetaMask
+      </a>
+    </div>
+    <div class="web3__mobile">
+      <h3 class="web3__title">Нужен Trust Wallet</h3>
+      <p class="web3__text">
+        Вам нужен Ethereum кошелек — мы советуем Trust Wallet
+      </p>
+      <a class="web3__link" href="https://links.trustwalletapp.com/TcLWVVtB2M">
+        Открыть в Trust Wallet
+      </a>
+    </div>
+  </div>
+  <button *ngIf="web3" class="web3__play">Играть</button>
+</section>
+

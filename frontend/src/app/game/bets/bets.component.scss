@@ -1,0 +1,55 @@
+.bets {
+  &__button-group {
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    margin-bottom: 15px;
+
+    button {
+      margin: 0 5px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    justify-content: center;
+
+    button {
+      background: none;
+      border: none;
+      text-align: center;
+      width: 65px;
+      height: 75px;
+      color: #ffffff;
+      font-size: 40px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__field-input {
+    width: 60%;
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: none;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.small-text {
+  font-size: 16px;
+}
+
+.disabled {
+  color: rgba(109, 128, 128, 0.42) !important;
+}
+

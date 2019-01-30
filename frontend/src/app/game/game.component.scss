@@ -1,0 +1,35 @@
+.game {
+  &__wrapper {
+    max-width: 1199px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+
+    &--game {
+      width: 40%;
+    }
+
+    &--info {
+      width: 25%;
+    }
+
+    &--history {
+      width: 33%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

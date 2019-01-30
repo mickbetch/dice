@@ -1,0 +1,18 @@
+a {
+  color: #ffffff;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.main {
+  &__wrapper {
+    max-width: 1199px;
+    margin: 0 auto;
+  }
+
+  &__heading-group {
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+.statistic {
+  &__wrapper {
+    max-width: 1199px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  &__item-text {
+    font-size: 16px;
+  }
+
+  &__item-big {
+    font-size: 30px;
+  }
+
+  &__players-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__players-item {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+}

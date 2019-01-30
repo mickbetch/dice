@@ -1,0 +1,42 @@
+.dice {
+  text-align: center;
+}
+
+.descr {
+  margin-bottom: 20px;
+  &__title {
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+  }
+
+  &__item {
+    font-size: 50px;
+    width: 30%;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    i {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    i.active {
+      color: #ffffff;
+    }
+  }
+}
+
+.small-text {
+  font-size: 16px;
+}

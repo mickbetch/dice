@@ -1,0 +1,72 @@
+.web3 {
+  text-align: center;
+
+  &__group {
+    padding: 30px 15px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+  }
+
+  &__desktop {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &__link {
+    display: block;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: background-color 0.25s ease-in-out;
+    color: #ffffff;
+    font-size: 18px;
+
+    &:hover {
+      background-color: #969fb7;
+    }
+  }
+
+  &__play {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: auto;
+    padding: 12px;
+    font-size: 27px;
+    transition: background-position 1s ease, background-size 1s ease;
+    background-image: linear-gradient(30deg, #00ffbd 0%, #4cc6d3 20%, #af7bf0 50%, #4cc6d3 80%, #00ffbd 100%);
+    box-shadow: 0 0 30px 0 rgba(24, 31, 49, 0.5);
+    background-size: 200% 100%;
+    background-repeat: repeat;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-position: 50% 0;
+      background-size: 800% 100%;
+    }
+  }
+}

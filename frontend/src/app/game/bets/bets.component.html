@@ -1,0 +1,17 @@
+<div class="bets">
+  <div class="bets__button-group">
+    <button *ngFor="let b of bets" mat-raised-button (click)="setCertainBet($event)">
+      {{b}}
+    </button>
+  </div>
+  <div class="bets__field">
+    <button #minus (click)="plusOrMinusBet('-')"
+            [ngClass]="{'disabled': minusDisabled}"
+            [disabled]="minusDisabled">-</button>
+    <input class="bets__field-input" type="text" [value]="(bet / percent) | number:'1.2-2'">
+    <button #plus (click)="plusOrMinusBet('+')"
+            [ngClass]="{'disabled': plusDisabled}"
+            [disabled]="plusDisabled">+</button>
+  </div>
+  <p class="small-text">Ваша ставка</p>
+</div>

@@ -1,0 +1,27 @@
+<div class="dice">
+  <div class="descr">
+    <h1 class="descr__title">Кубик</h1>
+    <ul class="descr__list">
+      <li class="descr__item">
+        <i class="fas fa-dice-one dice-item" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-two dice-item" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-three dice-item" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-four dice-item" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-five dice-item" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-six dice-item active" (click)="toggleActiveDice($event)"></i>
+      </li>
+    </ul>
+    <p class="small-text">Орел или Решка?</p>
+  </div>
+  <app-bets></app-bets>
+</div>

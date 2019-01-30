@@ -1,0 +1,25 @@
+<div class="etheroll">
+  <div class="descr">
+    <h1 class="descr__title">Etheroll</h1>
+    <div class="descr__slider-wrapper">
+      <mat-slider color="primary"
+        min="1"
+        max="97"
+        step="1"
+        thumbLabel
+        [displayWith]="formatLabel"
+        [(ngModel)]="winChance"
+        (change)="onSliderValueChanged()">
+      </mat-slider>
+      <ul class="descr__list">
+        <li class="descr__item">1%</li>
+        <li class="descr__item">25%</li>
+        <li class="descr__item">50%</li>
+        <li class="descr__item">75%</li>
+        <li class="descr__item">97%</li>
+      </ul>
+    </div>
+    <p class="small-text">Выберите любой процент</p>
+  </div>
+  <app-bets></app-bets>
+</div>

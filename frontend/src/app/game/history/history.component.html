@@ -1,0 +1,93 @@
+<div class="history">
+  <header class="header">
+    <h3 class="header__title">История</h3>
+    <button class="header__filter-button">Только мои / Все</button>
+  </header>
+  <div class="content">
+    <header class="content__header">
+      <ul class="content__list">
+        <li class="content__item content__item--player">Игрок</li>
+        <li class="content__item content__item--bet">Ставка</li>
+        <li class="content__item content__item--result">Результат</li>
+        <li class="content__item content__item--jackpot">Джекпот</li>
+      </ul>
+    </header>
+    <div class="main">
+      <ul class="main__list">
+        <li *ngFor="let user of usersInfoArray; let id = index;" class="main__item info">
+          <ul class="content__list content__list--hover" (click)="toggleInfoBlock($event)">
+            <li class="content__item content__item--player">
+              <i class="far fa-smile-wink"></i>
+              <span class="tx">{{ user.tx | shorten:5 }}</span>
+            </li>
+            <li class="content__item content__item--bet">
+              <span class="ethers">{{ user.ethers }}</span>
+              <span class="bet">{{ user.bet }}</span>
+            </li>
+            <li class="content__item content__item--result">
+              <span class="result">
+                <i [ngClass]="'fas fa-dice-' + num" *ngFor="let num of user.result"></i>
+              </span>
+              <span class="win-lose">{{ user.win }}</span>
+            </li>
+            <li class="content__item content__item--jackpot">
+              <span class="jackpot">{{ user.jackpot }}</span>
+              <i class="fas fa-angle-right"></i>
+            </li>
+          </ul>
+          <ul class="info__list hidden">
+            <li class="info__item">
+              <span>адрес</span>
+              <span>qwerty?</span>
+            </li>
+            <li class="info__item">
+              <span>ставка</span>
+              <span>{{ user.ethers | number:'1.3-3' }} ETH</span>
+            </li>
+            <li class="info__item">
+              <span>ставка на</span>
+              <span>{{ user.bet }}</span>
+            </li>
+            <li class="info__item">
+              <span>bet trx</span>
+              <span></span>
+            </li>
+            <li class="info__item">
+              <span>sha3(sercet)</span>
+              <span></span>
+            </li>
+            <li class="info__item">
+              <span>secret</span>
+              <span></span>
+            </li>
+            <li class="info__item">
+              <span>sha3(bet block)</span>
+              <span></span>
+            </li>
+            <li class="info__item">
+              <span>sha3(blk + sercet)</span>
+              <span></span>
+            </li>
+            <li class="info__item">
+              <span>sha3 mod 36</span>
+              <span>
+                <span style="margin-right: 5px;"
+                      *ngFor="let res of user.result">
+                  {{ numbersDictionary[res] }}
+                </span>
+              </span>
+            </li>
+            <li class="info__item">
+              <span>джекпот</span>
+              <span>{{ user.jackpot }}</span>
+            </li>
+            <li class="info__item">
+              <span>выигрыш</span>
+              <span>{{ user.win }}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

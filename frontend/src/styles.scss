@@ -1,0 +1,16 @@
+/* You can add global scss to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}

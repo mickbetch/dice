@@ -1,0 +1,48 @@
+a {
+  color: #ffffff;
+}
+
+.faqs {
+  &__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text + &__subtitle {
+    margin-top: 30px;
+  }
+
+  &__final-title {
+    margin-top: 40px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__sublist {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  &__sublist-item {
+    margin-bottom: 5px;
+  }
+}
+
+//.faqs__text + .faqs__subtitle {
+//  margin-top: 30px;
+//}

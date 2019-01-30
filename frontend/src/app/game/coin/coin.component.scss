@@ -1,0 +1,30 @@
+.coin {
+  text-align: center;
+}
+
+.descr {
+  margin-bottom: 20px;
+  &__title {
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 -15px;
+    margin-bottom: 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+  }
+
+  &__item {
+    margin: 0 15px;
+  }
+}
+
+.small-text {
+   font-size: 16px;
+ }
